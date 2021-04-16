@@ -15,6 +15,9 @@
 }
 
 .title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   text-align: center;
   color: white;
   font-size: 3rem;
@@ -35,4 +38,31 @@ video {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+.cursor {
+  margin: 0;
+  height: 50%;
+  font-size: 3rem;
+  font-family: "Courier New", Courier, monospace;
+  width: 2rem;
+  background-color: white;
+  animation-name: blink;
+  animation-duration: 0.75s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  49% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }

@@ -3,8 +3,6 @@ const bgvids = [
   document.getElementById("bgvid2"),
   document.getElementById("bgvid3"),
 ];
-let bgvid_index = 0;
-bgvids[bgvid_index].play();
 
 function bgvid_onended() {
   bgvids[bgvid_index].style.visibility = "hidden";
@@ -13,3 +11,6 @@ function bgvid_onended() {
   bgvids[bgvid_index].play();
   bgvids[bgvid_index].style.visibility = "visible";
 }
+
+let bgvid_index = 0;
+bgvids[bgvid_index].play();

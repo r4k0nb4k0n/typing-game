@@ -1,0 +1,38 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.above {
+  z-index: 1;
+}
+
+.title {
+  text-align: center;
+  color: white;
+  font-size: 3rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+.subtitle {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+  font-family: "Courier New", Courier, monospace;
+}
+
+video {
+  object-fit: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}

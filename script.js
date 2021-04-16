@@ -8,7 +8,7 @@ bgvids[bgvid_index].play();
 
 function bgvid_onended() {
   bgvids[bgvid_index].style.visibility = "hidden";
-  bgvids[bgvid_index].load();
+  bgvids[bgvid_index].currentTime = 0;
   bgvid_index = (bgvid_index + 1) % bgvids.length;
   bgvids[bgvid_index].play();
   bgvids[bgvid_index].style.visibility = "visible";

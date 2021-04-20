@@ -24,6 +24,11 @@
   font-family: "Courier New", Courier, monospace;
 }
 
+.title-input {
+  outline: none;
+  caret-color: transparent;
+}
+
 .subtitle {
   text-align: center;
   color: white;

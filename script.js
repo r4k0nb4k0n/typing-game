@@ -1,8 +1,5 @@
-const bgvids = [
-  document.getElementById("bgvid1"),
-  document.getElementById("bgvid2"),
-  document.getElementById("bgvid3"),
-];
+const bgvids = document.querySelectorAll("video");
+const enter_input = document.getElementById("enter-input");
 
 function bgvid_onended() {
   bgvids[bgvid_index].style.visibility = "hidden";
@@ -14,3 +11,12 @@ function bgvid_onended() {
 
 let bgvid_index = 0;
 bgvids[bgvid_index].play();
+
+function handle_enter_input(e) {
+  if (e.code === "Enter") {
+    e.preventDefault();
+    alert("Enter key pressed");
+  }
+}
+enter_input.onkeydown = handle_enter_input;
+enter_input.focus();

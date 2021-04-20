@@ -1,5 +1,18 @@
 const bgvids = document.querySelectorAll("video");
 const enter_input = document.getElementById("enter-input");
+const middle = document.getElementsByClassName("middle")[0];
+const blocked_keycode = [
+  "Page Up",
+  "Page Down",
+  "End",
+  "Home",
+  "Arrow Left",
+  "Arrow Up",
+  "Arrow Down",
+  "Arrow Right",
+  "Tab",
+  "Shift",
+];
 
 function bgvid_onended() {
   bgvids[bgvid_index].style.visibility = "hidden";
@@ -13,9 +26,19 @@ let bgvid_index = 0;
 bgvids[bgvid_index].play();
 
 function handle_enter_input(e) {
-  if (e.code === "Enter") {
+  if (blocked_keycode.includes(e.code)) {
     e.preventDefault();
-    alert("Enter key pressed");
+  } else if (e.code === "Enter") {
+    e.preventDefault();
+    if (enter_input.innerText === "Typing game") alert("Typing game entered.");
+    else {
+      const backup = middle.className;
+      middle.className = backup + " shake error";
+      let timer = setTimeout(() => {
+        middle.className = backup;
+        clearTimeout(timer);
+      }, 500);
+    }
   }
 }
 enter_input.onkeydown = handle_enter_input;

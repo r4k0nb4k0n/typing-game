@@ -13,14 +13,18 @@
 	</head>
 	<body class="main">
 		<div class="top above">
-			<p>hidden</p>
+			<p id="intro-dummy" class="transparent">hidden</p>
+			<p id="quote-para" style="display: none"></p>
 		</div>
 		<div class="middle above">
 			<h1 id="enter-input" contenteditable="true" class="title-input"></h1><h1 class="cursor"></h1>
 		</div>
 		<div class="bottom above">
-			<p>Type <code>Typing game</code> and press <code>Enter</code> key to continue...</p>
+			<p id="intro-desc">Type <code>Typing game</code> and press <code>Enter</code> key to continue...</p>
+			<p id="on-desc" style="display: none">Type the above text as exact and fast as you can, and press <code>Enter</code>.</p>
+			<p id="finished-desc" style="display: none">Type <code>Retry</code> and press <code>Enter</code> to retry...</p>
 		</div>
 	</body>
 </html>
+<script type="text/javascript" src="./quotes.js"></script>
 <script type="text/javascript" src="./script.js"></script>
